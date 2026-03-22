@@ -166,36 +166,3 @@ Calculated from dominant attribute + XP tier across 4 categories (Grit, Labor, W
 | Database | SQLite (dev) / PostgreSQL (prod) |
 | Auth | Session tokens via HTTP-only cookies |
 | CORS | django-cors-headers |
-
----
-
-## 🌵 Switching to PostgreSQL
-
-In `backend/homestead/settings.py`, replace the DATABASES block:
-
-```python
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "homestead",
-        "USER": "postgres",
-        "PASSWORD": "yourpassword",
-        "HOST": "localhost",
-        "PORT": "5432",
-    }
-}
-```
-
-Then `pip install psycopg2-binary` and re-run `python manage.py migrate`.
-
----
-
-## 🔐 Production Notes
-
-1. Change `SECRET_KEY` in `settings.py` to a strong random value
-2. Set `DEBUG = False`
-3. Set `ALLOWED_HOSTS` to your actual domain
-4. Set `CORS_ALLOWED_ORIGINS` to your frontend domain
-5. Use `SESSION_COOKIE_SECURE = True` and `SESSION_COOKIE_SAMESITE = "None"` for cross-domain
-6. Serve frontend via `npm run build && npm start` or deploy to Vercel
-7. Serve Django via Gunicorn behind Nginx

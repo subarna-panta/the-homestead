@@ -5,3 +5,4 @@ frontend/.next/
 __pycache__/
 *.pyc
 .env
+frontend/node_modules/

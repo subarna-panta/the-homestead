@@ -1,0 +1,10 @@
+{
+  "/auth/login/page": "app/auth/login/page.js",
+  "/sheriff/page": "app/sheriff/page.js",
+  "/sheriff/posse/page": "app/sheriff/posse/page.js",
+  "/sheriff/bounties/page": "app/sheriff/bounties/page.js",
+  "/sheriff/ledger/page": "app/sheriff/ledger/page.js",
+  "/sheriff/store/page": "app/sheriff/store/page.js",
+  "/cowboy/page": "app/cowboy/page.js",
+  "/cowboy/store/page": "app/cowboy/store/page.js"
+}
